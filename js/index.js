@@ -25,16 +25,16 @@
 //     return pin.length === 4 || pin.length === 6;
 // }
 ///////////////////////////////////////////five///////////////////////////////////
-function validatePIN (pin) {
-  if (pin.length === 4 || pin.length ===6) {
-    return pin.split('').every((num) => !isNaN(parseInt(num)));
-  }
-  return false;
-}
+// function validatePIN (pin) {
+//   if (pin.length === 4 || pin.length ===6) {
+//     return pin.split('').every((num) => !isNaN(parseInt(num)));
+//   }
+//   return false;
+// }
 
-console.log(validatePIN("00.0"))
-console.log(validatePIN("1233"))
-console.log(validatePIN("123342"))
+// console.log(validatePIN("00.0"))
+// console.log(validatePIN("1233"))
+// console.log(validatePIN("123342"))
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // const numbers = [12, 3, 4, 5, 67]
 // const sum = numbers.reduce((sum, el) => sum + el)
@@ -60,3 +60,46 @@ console.log(validatePIN("123342"))
 // }
 
 // console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+
+//////////////////////////////sumation///////////////////
+// var summation = function (num) {
+//   let total = 0
+//   // Code here
+//   for (let i = 1; i <= num; i += 1) {
+    
+//      total += i
+//     }
+    
+//     return total
+// }
+
+
+// console.log(summation(8))
+// console.log(summation(1))
+
+//////////////////////////////////////////////////////////////////////////////////
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+function bmi(weight, height) {
+  let bmiIndex = weight / Math.pow(height, 2)
+  console.log(bmiIndex)
+  if (bmiIndex <= 18.5) {
+     return "Underweight"
+  }
+  if (bmiIndex <= 25.0) {
+    return  "Normal"
+  }
+  if (bmiIndex <= 30.0) {
+    return "Overweight"
+  }
+  return "Obese"
+}
+
+console.log(bmi(100, 1.8))
