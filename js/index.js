@@ -88,22 +88,22 @@
 // if bmi <= 30.0 return "Overweight"
 
 // if bmi > 30 return "Obese"
-function bmi(weight, height) {
-  let bmiIndex = weight / Math.pow(height, 2)
-  console.log(bmiIndex)
-  if (bmiIndex <= 18.5) {
-     return "Underweight"
-  }
-  if (bmiIndex <= 25.0) {
-    return  "Normal"
-  }
-  if (bmiIndex <= 30.0) {
-    return "Overweight"
-  }
-  return "Obese"
-}
+// function bmi(weight, height) {
+//   let bmiIndex = weight / Math.pow(height, 2)
+//   console.log(bmiIndex)
+//   if (bmiIndex <= 18.5) {
+//      return "Underweight"
+//   }
+//   if (bmiIndex <= 25.0) {
+//     return  "Normal"
+//   }
+//   if (bmiIndex <= 30.0) {
+//     return "Overweight"
+//   }
+//   return "Obese"
+// }
 
-console.log(bmi(100, 1.8))
+// console.log(bmi(100, 1.8))
 
 // ///////////////////////////////////Завершите функцию, которая принимает строковый параметр и переворачивает
 // каждое слово в строке.Все пробелы в строке должны быть сохранены///////////////////////////////////////////
@@ -183,10 +183,30 @@ console.log(bmi(100, 1.8))
 // console.log(positiveSum([1,-2,3,4,5]))
 
 /////////////////////////////////////task
-function betterThanAverage(classPoints, yourPoints) {
-  console.log(classPoints.reduce((acc, e, arr) => (acc + e) / arr.length))
+// function betterThanAverage(classPoints, yourPoints) {
+//   console.log(classPoints.reduce((acc, e, arr) => (acc + e) / arr.length))
   
-}
+// }
 
-console.log(betterThanAverage([2, 3], 5))
+// console.log(betterThanAverage([2, 3], 5))
+
+/////////////////////////////////////////
+
+const str = "camelCasing"
+const str2 = "indentifier"
+  let indexUpper = 0
+function space(v) {
+  const arr = v.split("")
+  for (let i = 0; i < arr.length; i+=1) {
+    let isUpperCase = arr[i].toUpperCase() === arr[i]
+    if (isUpperCase) {
+      const index = arr.indexOf(arr[i])
+      arr.splice(index, 0, " ")
+      return arr.join("")
+    }
+  }
+  return arr.join("")
+    
+}
+console.log(space(str2))
 
