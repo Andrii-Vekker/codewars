@@ -1,3 +1,5 @@
+
+
 // Банкоматы позволяют использовать 4- или 6-значные PIN-коды, а PIN-коды не могут содержать ничего, кроме ровно 4 или ровно 6 цифр.
 
 // Если функции передана допустимая строка PIN-кода, верните true, иначе верните false.
@@ -192,21 +194,42 @@
 
 /////////////////////////////////////////
 
-const str = "camelCasing"
-const str2 = "indentifier"
-  let indexUpper = 0
-function space(v) {
-  const arr = v.split("")
-  for (let i = 0; i < arr.length; i+=1) {
-    let isUpperCase = arr[i].toUpperCase() === arr[i]
-    if (isUpperCase) {
-      const index = arr.indexOf(arr[i])
-      arr.splice(index, 0, " ")
-      return arr.join("")
-    }
-  }
-  return arr.join("")
+// const str = "camelCasing"
+// const str2 = "indentifier"
+//   let indexUpper = 0
+// function space(v) {
+//   const arr = v.split("")
+//   for (let i = 0; i < arr.length; i+=1) {
+//     let isUpperCase = arr[i].toUpperCase() === arr[i]
+//     if (isUpperCase) {
+//       const index = arr.indexOf(arr[i])
+//       arr.splice(index, 0, " ")
+//       return arr.join("")
+//     }
+//   }
+//   return arr.join("")
     
+// }
+// console.log(space(str2))
+
+//////////////////////////axios/////////////////
+
+// const URL = axios.defaults.baseURL = "https://6357ee1ec26aac906f369749.mockapi.io/api/contacts"
+
+// const instance = axios.create({
+//   baseURL: 'https://6357ee1ec26aac906f369749.mockapi.io/api/contacts'
+// });
+
+// export const getBooks = async () => {
+//     const { data } = await instance.get("/");
+//     console.log(data)
+//     return data
+// };
+// getBooks()
+
+const fetchBooks = () => {
+  fetch("https://6357ee1ec26aac906f369749.mockapi.io/api/contacts").then(response => response.json())
+  .then(data => console.log(data))
 }
-console.log(space(str2))
+fetchBooks()
 
